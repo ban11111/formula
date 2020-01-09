@@ -6,7 +6,7 @@ import (
 )
 
 //Register custom function which implement opt.Function
-func Register(f *opt.Function) error {
+func Register(f opt.Function) error {
 	return cache.Register(f)
 }
 

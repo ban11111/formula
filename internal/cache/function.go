@@ -7,15 +7,15 @@ import (
 	"sync"
 )
 
-var defaultFunctionCache = make(map[string]*opt.Function, 256)
+var defaultFunctionCache = make(map[string]opt.Function, 256)
 var rwLock sync.RWMutex
 
-func Register(f *opt.Function) error {
+func Register(f opt.Function) error {
 	if f == nil {
 		return fmt.Errorf("argument Function can not be nil")
 	}
 
-	lowerName := (*f).Name()
+	lowerName := f.Name()
 	lowerName = strings.ToLower(strings.TrimSpace(lowerName))
 
 	rwLock.Lock()
@@ -30,7 +30,7 @@ func Register(f *opt.Function) error {
 	return nil
 }
 
-func FindFunction(name string) (*opt.Function, error) {
+func FindFunction(name string) (opt.Function, error) {
 	name = strings.ToLower(strings.TrimSpace(name))
 	if f, ok := defaultFunctionCache[name]; ok {
 		return f, nil

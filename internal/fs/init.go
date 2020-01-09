@@ -44,7 +44,7 @@ func init() {
 	}
 
 	for i := 0; i < len(fs); i++ {
-		err := cache.Register(&fs[i])
+		err := cache.Register(fs[i])
 		if err != nil {
 			panic(err)
 		}

@@ -27,5 +27,5 @@ func (expression *BinaryExpression) Evaluate(context *opt.FormulaContext) (*opt.
 		return nil, err
 	}
 
-	return (*f).Evaluate(context, expression.LeftExpression, expression.RightExpression)
+	return f.Evaluate(context, expression.LeftExpression, expression.RightExpression)
 }

@@ -26,5 +26,5 @@ func (expression *FunctionExpression) Evaluate(context *opt.FormulaContext) (*op
 		return nil, err
 	}
 
-	return (*f).Evaluate(context, expression.Arguments...)
+	return f.Evaluate(context, expression.Arguments...)
 }
