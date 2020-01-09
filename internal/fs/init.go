@@ -1,8 +1,8 @@
 package fs
 
 import (
-	"github.com/yidane/formula/internal/cache"
-	"github.com/yidane/formula/opt"
+	"github.com/ban11111/formula/internal/cache"
+	"github.com/ban11111/formula/opt"
 )
 
 func init() {

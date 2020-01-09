@@ -2,10 +2,10 @@ package fs
 
 import (
 	"fmt"
-	"github.com/yidane/formula/internal/exp"
+	"github.com/ban11111/formula/internal/exp"
 	"testing"
 
-	"github.com/yidane/formula/opt"
+	"github.com/ban11111/formula/opt"
 )
 
 func TestPowerFunction_Evaluate(t *testing.T) {

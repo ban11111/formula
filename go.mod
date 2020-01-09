@@ -1,4 +1,4 @@
-module github.com/yidane/formula
+module github.com/ban11111/formula
 
 go 1.11
 

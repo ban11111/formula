@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/yidane/formula/opt"
+	"github.com/ban11111/formula/opt"
 	"reflect"
 )
 

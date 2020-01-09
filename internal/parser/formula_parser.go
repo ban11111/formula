@@ -11,8 +11,8 @@ import (
 )
 
 import (
-	"github.com/yidane/formula/internal/exp"
-	"github.com/yidane/formula/opt"
+	"github.com/ban11111/formula/internal/exp"
+	"github.com/ban11111/formula/opt"
 )
 
 // Suppress unused import errors

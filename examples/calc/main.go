@@ -3,7 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/yidane/formula"
+	"github.com/ban11111/formula"
 	"io"
 	"log"
 	"os"

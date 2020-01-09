@@ -20,6 +20,14 @@ func NewArgument(v interface{}) *Argument {
 		}
 	}
 
+	if reflect.TypeOf(v).Kind() == reflect.Func {
+		fv := v.(func() interface{})()
+		return &Argument{
+			Value: fv,
+			Type:  reflect.TypeOf(fv).Kind(),
+		}
+	}
+
 	return &Argument{
 		Value: v,
 		Type:  reflect.TypeOf(v).Kind(),

@@ -1,6 +1,6 @@
 package cache
 
-import "github.com/yidane/formula/opt"
+import "github.com/ban11111/formula/opt"
 
 var defaultExpression = make(map[string]*opt.LogicalExpression, 512)
 
