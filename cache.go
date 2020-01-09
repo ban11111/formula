@@ -6,8 +6,13 @@ import (
 )
 
 //Register custom function which implement opt.Function
-func Register(f opt.Function) error {
-	return cache.Register(f)
+func Register(fs ...opt.Function) error {
+	for _, f := range fs {
+		if err := cache.Register(f); err != nil {
+			return err
+		}
+	}
+	return nil
 }
 
 //RegisterGlobalParameter register global parameter which will be used in all the runtime
